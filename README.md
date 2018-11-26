@@ -1,2 +1,2 @@
 # lightning-comp-global-snippets
-Lightning Components global snippets for Visual Studio Code
+Lightning Component global snippets for Visual Studio Code
