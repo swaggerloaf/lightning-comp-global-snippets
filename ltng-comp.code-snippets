@@ -1,0 +1,286 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "aura attribute": {
+    "prefix": "aura-attribute",
+    "body": [
+      "<aura:attribute name=\"value\" type=\"String\" default=\"option1\"/>"
+    ],
+    "description": "aura-attribute"
+  },
+  "aura component": {
+    "prefix": "aura-component",
+    "body": ["<aura:component></aura:component>"],
+    "description": "aura-component"
+  },
+  "aura if": {
+    "prefix": "aura-if",
+    "body": [
+      "<aura:if isTrue=\"{! v.truthy }\">",
+      "True",
+      "<aura:set attribute=\"else\">",
+      "  False",
+      "</aura:set>",
+      "</aura:if>"
+    ],
+    "description": "aura-if"
+  },
+  // lightning components
+  "ltng accordion": {
+    "prefix": "ltng-accordion",
+    "body": [
+      "<lightning:accordion aura:id=\"accordion\" activeSectionName=\"B\">",
+      "    <lightning:accordionSection name=\"A\" label=\"Accordion Title A\">",
+      "        <aura:set attribute=\"actions\">",
+      "            <lightning:buttonMenu aura:id=\"menu\" alternativeText=\"Show menu\" menuAlignment=\"right\" iconSize=\"x-small\">",
+      "                <lightning:menuItem value=\"New\" label=\"Menu Item One\" />",
+      "                <lightning:menuItem value=\"Edit\" label=\"Menu Item Two\" />",
+      "            </lightning:buttonMenu>",
+      "        </aura:set>",
+      "        <aura:set attribute=\"body\">",
+      "            <p>This is the content area for section A.</p>",
+      "            <p>.</p>",
+      "            <p>.</p>",
+      "            <p>.</p>",
+      "            <p>The section height expands to fit your content.</p>",
+      "        </aura:set>",
+      "    </lightning:accordionSection>",
+      "</lightning:accordion>"
+    ],
+    "description": "ltng-accordion"
+  },
+  "ltng avatar": {
+    "prefix": "ltng-avatar",
+    "body": [
+      "<lightning:avatar src=\"/docs/component-library/app/images/examples/avatar1.jpg\" initials=\"BW\" fallbackIconName=\"standard:person_account\" alternativeText=\"Bob Wilson\"/>"
+    ],
+    "description": "ltng-avatar"
+  },
+  "ltng badge": {
+    "prefix": "ltng-badge",
+    "body": [" <lightning:badge label=\"Label\"/>"],
+    "description": "ltng-badge"
+  },
+  "ltng breadcrumbs": {
+    "prefix": "ltng-breadcrumbs",
+    "body": [
+      "<lightning:breadcrumbs>",
+      "<lightning:breadcrumb label=\"Parent Entity\" href=\"path/to/place/1\"/>",
+      "<lightning:breadcrumb label=\"Parent Record Name\" href=\"path/to/place/2\"/>",
+      "</lightning:breadcrumbs>"
+    ],
+    "description": "ltng-breadcrumbs"
+  },
+  "ltng button base": {
+    "prefix": "ltng-btn-base",
+    "body": [
+      "<!-- Base variant: Makes a button look like a link -->",
+      "<lightning:button variant=\"base\" label=\"Base\" title=\"Base action\" onclick=\"{! c.handleClick }\"/>"
+    ],
+    "description": "ltng-btn-base"
+  },
+  "ltng button brand": {
+    "prefix": "ltng-btn-brand",
+    "body": [
+      "<!-- Brand variant: Identifies the primary action in a group of buttons -->",
+      "<lightning:button variant=\"brand\" label=\"Brand action\" title=\"Brand action\" onclick=\"{! c.handleClick }\" />"
+    ],
+    "description": "ltng-btn-brand"
+  },
+  "ltng button destructive": {
+    "prefix": "ltng-btn-destructive",
+    "body": [
+      "<!-- Destructive variant: Identifies a potentially negative action -->",
+      "<lightning:button variant=\"destructive\" label=\"Destructive\" title=\"Destructive action\" onclick=\"{! c.handleClick }\"/>"
+    ],
+    "description": "ltng-btn-destructive"
+  },
+  "ltng button neutral": {
+    "prefix": "ltng-btn-neutral",
+    "body": [
+      " <!-- Neutral variant (default) -->",
+      "<lightning:button label=\"Neutral\" title=\"Neutral action\" onclick=\"{! c.handleClick }\"/>"
+    ],
+    "description": "ltng-btn-base"
+  },
+  "ltng button success": {
+    "prefix": "ltng-btn-success",
+    "body": [
+      " <!-- Success variant: Identifies a successful action -->",
+      "<lightning:button variant=\"success\" label=\"Success\" title=\"Success\" onclick=\"{! c.handleClick }\"/>"
+    ],
+    "description": "ltng-btn-success"
+  },
+  "ltng button buttonGroup": {
+    "prefix": "ltng-buttonGroup",
+    "body": [" <lightning:buttonGroup>"],
+    "description": "ltng-btn-buttonGroup"
+  },
+  "ltng button buttonIcon": {
+    "prefix": "ltng-buttonIcon",
+    "body": [
+      "<lightning:buttonIcon iconName=\"utility:down\"  size=\"small\" alternativeText=\"View More\" />"
+    ],
+    "description": "ltng-btn-buttonIcon"
+  },
+  "ltng button buttonMenu": {
+    "prefix": "ltng-buttonMenu",
+    "body": [
+      "<lightning:buttonMenu aura:id=\"menu\" onselect=\"{! c.handleSelect }\" alternativeText=\"Show menu\">",
+      "<lightning:menuItem value=\"MenuItemOne\" label=\"Menu Item One\" />",
+      "<lightning:menuItem value=\"MenuItemTwo\" label=\"Menu Item Two\" />",
+      "<lightning:menuItem value=\"MenuItemThree\" label=\"Menu Item Three\" disabled=\"true\" />",
+      "</lightning:buttonMenu>"
+    ],
+    "description": "ltng-btn-buttonMenu"
+  },
+  "ltng button buttonStateful": {
+    "prefix": "ltng-buttonStateful",
+    "body": [
+      "<aura:attribute name=\"buttonstate\" type=\"Boolean\" default=\"false\"/>",
+      "<lightning:buttonStateful",
+      "labelWhenOff=\"Follow\"",
+      "labelWhenOn=\"Following\"",
+      "labelWhenHover=\"Unfollow\"",
+      "iconNameWhenOff=\"utility:add\"",
+      "iconNameWhenOn=\"utility:check\"",
+      "iconNameWhenHover=\"utility:close\"",
+      "state=\"{! v.buttonstate }\"",
+      "onclick=\"{! c.handleClick }\"",
+      ">"
+    ],
+    "description": "ltng-buttonStateful"
+  },
+  "ltng card": {
+    "prefix": "ltng-card",
+    "body": [
+      "<lightning:card footer=\"Card Footer\" title=\"Hello\">",
+      "<aura:set attribute=\"actions\">",
+      "<lightning:button label=\"New\"/>",
+      "</aura:set>",
+      "<p class=\"slds-p-horizontal_small\">",
+      "Card Body (custom component)",
+      "</p>",
+      "</lightning:card>"
+    ],
+    "description": "ltng card"
+  },
+  "lightning flow": {
+    "prefix": "ltng-flow",
+    "body": [
+      "<lightning:flow aura:id=\"flow\" onstatuschange=\"{!c.statusChange}\"/>"
+    ],
+    "description": "lightning flow"
+  },
+  "lightning input checkbox": {
+    "prefix": "ltng-input-checkbox",
+    "body": [
+      "<lightning:input type=\"checkbox\" label=\"Required option\" name=\"input2\" checked=\"true\" required=\"true\"/>"
+    ],
+    "description": "lightning input checkbox"
+  },
+  "lightning input date": {
+    "prefix": "ltng-input-date",
+    "body": [
+      "<lightning:input type=\"date\" name=\"input5\" label=\"Required date field\" required=\"true\" value=\"2017-09-07\" />"
+    ],
+    "description": "lightning input date"
+  },
+  "lightning input email": {
+    "prefix": "ltng-input-email",
+    "body": [
+      "<lightning:input type=\"email\" name=\"email1\" value=\"abc@domain.com\" label=\"Email field with predefined value\" />"
+    ],
+    "description": "lightning input email"
+  },
+  "lightning input number": {
+    "prefix": "ltng-input-number",
+    "body": [
+      "<lightning:input type=\"number\" name=\"input6\" label=\"Number field with percentage formatter\" value=\"0.5\" formatter=\"percent\" step=\"0.01\"/>"
+    ],
+    "description": "lightning input number"
+  },
+  "lightning input text": {
+    "prefix": "ltng-input-text",
+    "body": ["<lightning:input name=\"input1\" label=\"Enter some text\" />"],
+    "description": "lightning input text"
+  },
+  "lightning input radio": {
+    "prefix": "ltng-input-radio",
+    "body": [
+      "<lightning:input type=\"radio\" label=\"Basic option\" name=\"options\" value=\"1\"/>"
+    ],
+    "description": "lightning input radio"
+  },
+  "lightning layout": {
+    "prefix": "ltng-layout",
+    "body": ["<lightning:layout>", "</lightning:layout>"],
+    "description": "lightning layout"
+  },
+  "lightning layoutItem": {
+    "prefix": "ltng-layoutItem",
+    "body": [
+      "<lightning:layoutItem padding=\"around-small\">",
+      "  <div class=\"header-column\">",
+      "  </div>",
+      "</lightning:layoutItem>"
+    ],
+    "description": "lightning layoutItem header"
+  },
+  "lightning layoutItem header": {
+    "prefix": "ltng-layoutItem-header",
+    "body": [
+      "<lightning:layoutItem padding=\"around-small\">",
+      "  <div class=\"header-column\">",
+      "    <p class=\"field-title\" title=\"Field 1\">Field 1</p>",
+      "    <p>Name</p>",
+      "  </div>",
+      "</lightning:layoutItem>"
+    ],
+    "description": "lightning layoutItem header"
+  },
+  "lightning icon": {
+    "prefix": "ltng-icon",
+    "body": [
+      "<lightning:icon iconName=\"standard:scan_card\" alternativeText=\"My Expenses\"/>"
+    ],
+    "description": "lightning icon"
+  },
+  "ltng radioGroup": {
+    "prefix": "ltng-radioGroup",
+    "body": [
+      "<aura:attribute name=\"options\" type=\"List\" default=\"[",
+      "{'label': 'Sales', 'value': 'option1'},",
+      "{'label': 'Force', 'value': 'option2'}]\"/>",
+      "<aura:attribute name=\"value\" type=\"String\" default=\"option1\"/>",
+      "",
+      "<lightning:radioGroup name=\"radioGroup\"",
+      "label=\"Radio Group\"",
+      "options=\"{! v.options }\"",
+      "value=\"{! v.value }\"",
+      "type=\"radio\"/>"
+    ],
+    "description": "ltng-radioGroup"
+  },
+  "lightning spinner": {
+    "prefix": "ltng-spinner",
+    "body": [
+      "<lightning:spinner alternativeText=\"Loading\" size=\"small\" />"
+    ],
+    "description": "lightning spinner"
+  }
+}
