@@ -1,5 +1,6 @@
 # lightning-comp-global-snippets
 Lightning Component global snippets for Visual Studio Code
+<code>sfdx plugins --core</code>
 
 <code>SFDX: Create file with manifest</code>
   
