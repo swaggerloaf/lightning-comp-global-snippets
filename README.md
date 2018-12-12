@@ -9,3 +9,10 @@ Lightning Component global snippets for Visual Studio Code
 <code>sfdx force:source:deploy -x manifest/package.xml</code>
 
 <code>sfdx force:source:retrieve -x manifest/package.xml</code>
+
+<code>npm init</code>
+
+<code>"devDependencies": {
+    "@salesforce-ux/design-system":"2.7.5"
+  }
+</code>
