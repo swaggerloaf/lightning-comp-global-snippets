@@ -16,3 +16,5 @@ Lightning Component global snippets for Visual Studio Code
     "@salesforce-ux/design-system":"2.7.5"
   }
 </code>
+
+<code>sfdx force:source:delete -p force-app/main/default/aura</code>
