@@ -18,3 +18,5 @@ Lightning Component global snippets for Visual Studio Code
 </code>
 
 <code>sfdx force:source:delete -p force-app/main/default/aura</code>
+
+<code>sfdx force:source:delete -p force-app/main/default/</code>
